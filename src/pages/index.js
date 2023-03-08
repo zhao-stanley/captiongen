@@ -17,7 +17,7 @@ export default function Home() {
   const [blurb, setBlurb] = useState("");
   const captionsRef = useRef(null);
 
-  const prompt = `Generate 2 ${selectedStyle} Instagram captions with no hashtags and clearly label them "1." and "2.". ${
+  const prompt = `Generate 2 ${selectedStyle} Instagram captions using no hashtags and clearly label them "1." and "2.". ${
     selectedStyle === "Funny" && "Be funny and humorous, utilize jokes."
   } ${
     selectedStyle === "Creative" &&
