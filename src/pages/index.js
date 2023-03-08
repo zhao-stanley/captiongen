@@ -17,7 +17,7 @@ export default function Home() {
   const [blurb, setBlurb] = useState("");
   const captionsRef = useRef(null);
 
-  const prompt = `Generate 2 ${selectedStyle} Instagram captions, do not use hashtags, and do not use quotation marks. Clearly label them "1." and "2.". ${
+  const prompt = `Generate 2 ${selectedStyle} Instagram captions with no hashtags and clearly label them "1." and "2.". ${
     selectedStyle === "Funny" && "Be funny and humorous, utilize jokes."
   } ${
     selectedStyle === "Creative" &&
@@ -139,7 +139,7 @@ export default function Home() {
               loading && "animate-pulse"
             } disabled:brightness-90 disabled:cursor-not-allowed text-base xl:text-lg bg-gradient-to-br from-red-500 to-purple-500 hover:hue-rotate-[-90deg] duration-200 transition ease-linear px-3 py-2 rounded-xl font-bold text-white w-full whitespace-nowrap max-w-sm`}
           >
-            Generate your caption &rarr;
+            {loading ? "Generating..." : "Generate your caption →"}
           </button>
           {generatedCaptions.length > 0 && (
             <section
