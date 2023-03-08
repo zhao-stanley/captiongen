@@ -24,7 +24,7 @@ export default function Home() {
   const [blurb, setBlurb] = useState("");
   const captionsRef = useRef(null);
 
-  const prompt = `Generate 2 ${selectedStyle} social media post captions, do not use hashtags and do not use quotation marks. Clearly label them "1." and "2.". ${
+  const prompt = `Generate 2 ${selectedStyle} social media post captions, do not use hashtags, and do not use quotation marks. Clearly label them "1." and "2.". ${
     selectedStyle === "Creative" &&
     "Be creative and clever, utilize puns and rhyme."
   }
