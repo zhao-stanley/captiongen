@@ -9,14 +9,7 @@ import Caption from "../components/Caption";
 import Link from "next/link";
 
 export default function Home() {
-  const styles = [
-    "Funny",
-    "Creative",
-    "Short",
-    "Informative",
-    "Quirky",
-    "Robotic",
-  ];
+  const styles = ["Funny", "Creative", "Informative", "Quirky", "Robotic"];
   const [loading, setLoading] = useState(false);
   const [selectedStyle, setSelectedStyle] = useState(styles[0]);
   const [text, setText] = useState("");
@@ -39,9 +32,9 @@ export default function Home() {
     "Be informative and educational. Insert facts and statistics."
   }
       ${
-        selectedStyle === "Short"
-          ? "Do not generate a caption that exceed 10 words"
-          : "Do not generate a caption that exceed 20 words"
+        selectedStyle === "informative"
+          ? "Generate a caption that is less than 20 words"
+          : "Generate a caption that is less than 10 words"
       }, has short sentences that are found in social media posts, and base them on this description: ${text}${
     text.slice(-1) === "." ? "" : "."
   }`;
