@@ -17,7 +17,10 @@ export default function Document() {
           property="og:description"
           content="Quickly generate the perfect caption for your social media post."
         />
-        <meta property="og:image" content="/preview.png" />
+        <meta
+          property="og:image"
+          content="https://captiongen.szhao.dev/preview.png"
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://captiongen.szhao.dev/" />
         <meta property="twitter:title" content="captiongen" />
@@ -25,7 +28,10 @@ export default function Document() {
           property="twitter:description"
           content="Quickly generate the perfect caption for your social media post."
         />
-        <meta property="twitter:image" content="/preview.png" />
+        <meta
+          property="twitter:image"
+          content="https://captiongen.szhao.dev/preview.png"
+        />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       <body>
