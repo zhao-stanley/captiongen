@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Header](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=%20%20captiongen%20%20&fontAlign=50&fontSize=50)
 
 ## Getting Started
 
-First, run the development server:
+First, you will need a `OPENAI_API_KEY` in your `.env` file to run this locally.
+
+You can then start a development server:
 
 ```bash
 npm run dev
@@ -12,27 +14,14 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to access the application.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## How does it work?
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This app uses OpenAI's `gpt-3.5-turbo` model and Vercel Edge functions with streaming. Captions are then generated based on the user's specifications. The payload is then sent to OpenAI's endpoint using Vercel's Edge function.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+#### Credits
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Inspiration + Edge function: [@nutlope](https://github.com/nutlope)
+- Continuous Deployment: [@vercel](https://github.com/vercel)
+- README Banner: [@capsulerender](https://github.com/kyechan99/capsule-render)

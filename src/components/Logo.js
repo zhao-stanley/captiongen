@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 export default function Logo() {
-  const themes = ["ig", "twt", "fb", "tik"];
+  const themes = ["ig", "twt", "fb", "tik", "yt"];
   const [theme, setTheme] = useState("ig");
   return (
     <h1
-      className="text-2xl font-bold cursor-pointer select-none"
+      className="text-2xl xl:text-3xl font-bold cursor-pointer select-none"
       onClick={() =>
         setTheme(themes[Math.floor(Math.random() * themes.length)])
       }
@@ -25,6 +25,11 @@ export default function Logo() {
       ) : theme === "twt" ? (
         <>
           <span className="text-[#00acee]">caption</span>
+          <span>gen</span>
+        </>
+      ) : theme === "yt" ? (
+        <>
+          <span className="text-[#ff0000]">caption</span>
           <span>gen</span>
         </>
       ) : (

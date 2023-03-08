@@ -5,6 +5,7 @@ export default function Github() {
     <Link
       className="flex flex-row items-center text-sm gap-2 rounded-2xl px-3 py-2 bg-white hover:bg-neutral-100 border-neutral-300 hover:border-neutral-900 border-2 shadow-lg transition ease-linear"
       href={"https://github.com/zhao-stanley/captiongen"}
+      target="_blank"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
