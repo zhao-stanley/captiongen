@@ -25,7 +25,7 @@ export default function Home() {
   }
   ${
     selectedStyle === "Robotic" &&
-    "Be robotic and impersonal. The caption should sound like it was written by an AI model and not a human."
+    "Be robotic and impersonal, do not use any emotion."
   }
   ${
     selectedStyle === "Informative" &&
