@@ -48,6 +48,7 @@ export default function Home() {
 
   async function generateCaption(e) {
     e.preventDefault();
+    if (text.length === 0) return;
     //Reset previously generated captions
     setGeneratedCaptions("");
     setLoading(true);
