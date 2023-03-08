@@ -17,7 +17,7 @@ export default function Home() {
   const [blurb, setBlurb] = useState("");
   const captionsRef = useRef(null);
 
-  const prompt = `Generate 2 ${selectedStyle} Instagram captions without including hashtags and quotation marks. Clearly label them "1." and "2.". ${
+  const prompt = `Generate 2 ${selectedStyle} Instagram captions, do not use hashtags, and do not use quotation marks. Clearly label them "1." and "2.". ${
     selectedStyle === "Funny" && "Be funny and utilize jokes and common humor."
   } ${
     selectedStyle === "Creative" &&
@@ -33,9 +33,9 @@ export default function Home() {
   }
       ${
         selectedStyle === "informative"
-          ? "Generate a caption that is less than 20 words"
-          : "Generate a caption that is less than 10 words"
-      }, has short sentences that are found in social media posts, and base them on this description: ${text}${
+          ? "Do not generate a caption that is more than 20 words"
+          : "Do not generate a caption that is more than 10 words"
+      }, and base them on this description: ${text}${
     text.slice(-1) === "." ? "" : "."
   }`;
 
