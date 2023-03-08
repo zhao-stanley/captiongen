@@ -115,7 +115,7 @@ export default function Home() {
                 </span>
                 <p>
                   Describe <strong>relevant things in your post</strong> that
-                  you'd like in your caption.
+                  you&apos;d like in your caption.
                 </p>
               </div>
               <UserInput text={text} setText={setText} />
