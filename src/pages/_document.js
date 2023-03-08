@@ -8,14 +8,14 @@ export default function Document() {
         <meta name="title" content="captiongen" />
         <meta
           name="description"
-          content="Quickly generate the perfect caption for your social media post."
+          content="Generate the perfect caption with the help of ChatGPT."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://captiongen.szhao.dev/" />
         <meta property="og:title" content="captiongen" />
         <meta
           property="og:description"
-          content="Quickly generate the perfect caption for your social media post."
+          content="Generate the perfect caption with the help of ChatGPT."
         />
         <meta
           property="og:image"
@@ -26,7 +26,7 @@ export default function Document() {
         <meta property="twitter:title" content="captiongen" />
         <meta
           property="twitter:description"
-          content="Quickly generate the perfect caption for your social media post."
+          content="Generate the perfect caption with the help of ChatGPT."
         />
         <meta
           property="twitter:image"

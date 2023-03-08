@@ -95,7 +95,7 @@ export default function Home() {
         <main className="w-full h-full p-4 sm:p-6 lg:py-12 xl:py-24 flex flex-col gap-8 lg:gap-12 items-center">
           <Github />
           <h1 className="text-center font-bold text-3xl xl:text-4xl h-full">
-            Generate your next{" "}
+            Generate the perfect{" "}
             <Typewriter
               cursor={{ char: " " }}
               timeBeforeDelete={2000}
