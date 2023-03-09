@@ -17,25 +17,25 @@ export default function Home() {
   const [blurb, setBlurb] = useState("");
   const captionsRef = useRef(null);
 
-  const prompt = `Generate 2 ${selectedStyle} Instagram captions using no hashtags and clearly label them "1." and "2.". ${
+  const prompt = `Generate 2 ${selectedStyle} social media captions with no hashtags and clearly label them "1." and "2.". ${
     selectedStyle === "Funny" && "Be funny and humorous, utilize jokes."
   } ${
     selectedStyle === "Creative" &&
-    "Be creative and clever, utilize puns and rhyme."
+    "Make sure it's creative and clever, utilize puns and rhyme."
   }
   ${
     selectedStyle === "Robotic" &&
-    "Be robotic and impersonal, do not use any emotion."
+    "Make sure it's robotic and impersonal, do not use any emotion."
   }
   ${
     selectedStyle === "Informative" &&
-    "Be informative and educational. Insert facts and statistics."
+    "Make sure it's informative and educational. Insert facts and statistics."
   }
       ${
         selectedStyle === "informative"
           ? "Do not generate a caption that is more than 20 words"
           : "Do not generate a caption that is more than 10 words"
-      }, and base them on this description: ${text}${
+      }, and base them on this context: ${text}${
     text.slice(-1) === "." ? "" : "."
   }`;
 
