@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>captiongen</title>
         <meta name="title" content="captiongen" />
         <meta
           name="description"
