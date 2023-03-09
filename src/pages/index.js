@@ -29,10 +29,10 @@ export default function Home() {
   }
   ${
     selectedStyle === "Informative" &&
-    "Make sure it's informative and educational. Insert facts and statistics."
+    "Make sure it's informative and educational, insert facts and statistics."
   }
       ${
-        selectedStyle === "informative"
+        selectedStyle === "Informative"
           ? "Do not generate a caption that is more than 20 words"
           : "Do not generate a caption that is more than 10 words"
       }, and base them on this context: ${text}${
