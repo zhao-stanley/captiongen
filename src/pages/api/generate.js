@@ -19,7 +19,13 @@ const handler = async (req) => {
 
   const payload = {
     model: "gpt-3.5-turbo",
-    messages: [{ role: "user", content: prompt }],
+    messages: [
+      {
+        role: "system",
+        content: `You are strictly a social media caption generator that absolutely does not include any hashtags and quotation marks. The caption must not exceed 10 words unless the selected style is "Informative". Clearly label the captions "1." and "2.". I will now instruct you on the style of the caption and provide you context to base the caption on."`,
+      },
+      { role: "user", content: prompt },
+    ],
     temperature: 0.7,
     top_p: 1,
     frequency_penalty: 0,
