@@ -36,7 +36,11 @@ const handler = async (req) => {
   };
 
   const stream = await OpenAIStream(payload, key);
-  return new Response(stream);
+  return new Response(stream, {
+    headers: new Headers({
+      "Cache-Control": "no-cache",
+    }),
+  });
 };
 
 export default handler;
