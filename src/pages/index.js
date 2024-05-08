@@ -8,6 +8,7 @@ import randomBlurb from "../utils/randomBlurb";
 import Caption from "../components/Caption";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { createParser } from "eventsource-parser";
 
 const KeyPanel = dynamic(() => import("../components/KeyPanel"), {
   ssr: false,
@@ -77,20 +78,32 @@ export default function Home() {
     let newBlurb = randomBlurb();
     setBlurb(newBlurb);
 
+    const onParseGPT = (event) => {
+      if (event.type === "event") {
+        const data = event.data;
+        try {
+          const text = JSON.parse(data).text ?? "";
+          setGeneratedCaptions((prev) => prev + text);
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    };
+
     const reader = data.getReader();
     const decoder = new TextDecoder();
+    const parser = createParser(onParseGPT);
     let done = false;
-
     while (!done) {
       const { value, done: doneReading } = await reader.read();
       done = doneReading;
       const chunkValue = decoder.decode(value);
-      setGeneratedCaptions((prev) => prev + chunkValue);
+      parser.feed(chunkValue);
     }
+
     if (captionsRef.current !== null) {
       captionsRef.current.scrollIntoView({ behavior: "smooth" });
     }
-
     setLoading(false);
   }
 

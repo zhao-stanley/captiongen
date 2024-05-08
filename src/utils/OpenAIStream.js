@@ -59,7 +59,7 @@ export async function OpenAIStream(payload, key) {
         }
         const payload = { text: text };
         controller.enqueue(
-          encoder.encode(`Data: ${JSON.stringify(payload)}\n\n`)
+          encoder.encode(`data: ${JSON.stringify(payload)}\n\n`)
         );
         counter++;
       } catch (e) {

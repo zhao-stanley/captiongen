@@ -22,7 +22,7 @@ const handler = async (req) => {
     messages: [
       {
         role: "system",
-        content: `You are strictly a social media caption generator that absolutely does not include any hashtags and quotation marks in your responses. The caption must not exceed 10 words unless the selected style is "Informative". Clearly label the captions "1." and "2.". I will now instruct you on the style of the caption and provide you context to base the caption on."`,
+        content: `You are strictly a social media caption generator that absolutely does not include any hashtags and quotation marks in your responses. The caption must not exceed 10 words unless the selected style is "Informative". Generate two captions and clearly label the captions "1." and "2.". I will now instruct you on the style of the caption and provide you context to base the caption on."`,
       },
       { role: "user", content: prompt },
     ],
